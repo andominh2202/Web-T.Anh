@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học Tiếng Anh Cho Trẻ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌈 Học Tiếng Anh Vui Vẻ 🌟</h1>
+        <p class="subtitle">Dành cho bé từ 3 tuổi trở lên</p>
+        
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('vocabulary')">📚 Từ Vựng</button>
+            <button class="tab" onclick="showTab('game')">🎮 Trò Chơi</button>
+            <button class="tab" onclick="showTab('links')">🔗 Tài Nguyên</button>
+        </div>
+        
+        <div id="vocabulary" class="content active">
+            <h2 style="text-align: center; color: #667eea; margin-bottom: 20px;">🍎 Học Từ Vựng Qua Hình Ảnh</h2>
+            <div style="text-align: center; margin-bottom: 20px;">
+                <button class="add-word-btn" onclick="showAddWordForm()">➕ Thêm Từ Mới</button>
+            </div>
+            
+            <!-- Form thêm từ mới -->
+            <div id="addWordForm" style="display: none;">
+                <div class="form-container">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">Thêm Từ Vựng Mới</h3>
+                    <input type="text" id="newWord" placeholder="Từ tiếng Anh (vd: Car)" class="input-field">
+                    <input type="text" id="newWordVn" placeholder="Nghĩa tiếng Việt (vd: Xe hơi)" class="input-field">
+                    <input type="text" id="newEmoji" placeholder="Emoji (vd: 🚗)" class="input-field">
+                    <input type="text" id="newPronunciation" placeholder="Phát âm (vd: /kɑːr/)" class="input-field">
+                    <div style="display: flex; gap: 10px; justify-content: center; margin-top: 15px;">
+                        <button class="save-btn" onclick="addNewWord()">💾 Lưu</button>
+                        <button class="cancel-btn" onclick="hideAddWordForm()">❌ Hủy</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="image-grid" id="vocabularyGrid"></div>
+        </div>
+        
+        <div id="game" class="content">
+            <div class="game-section">
+                <div class="game-title">🎯 Tìm Hình Ảnh Đúng!</div>
+                <div class="score">Điểm: <span id="score">0</span></div>
+                <div id="gameContent"></div>
+                <button class="next-btn" onclick="nextQuestion()">Câu Tiếp Theo ➡️</button>
+            </div>
+        </div>
+        
+        <div id="links" class="content">
+            <h2 style="text-align: center; color: #667eea; margin-bottom: 20px;">🌐 Tài Nguyên Học Tiếng Anh</h2>
+            <div class="link-section">
+                <a href="https://www.youtube.com/c/SuperSimpleSongs" target="_blank" class="link-card">
+                    <div class="link-icon">🎵</div>
+                    <div class="link-title">Super Simple Songs</div>
+                    <div class="link-desc">Các bài hát tiếng Anh vui nhộn cho trẻ em</div>
+                </a>
+                <a href="https://www.starfall.com" target="_blank" class="link-card">
+                    <div class="link-icon">⭐</div>
+                    <div class="link-title">Starfall</div>
+                    <div class="link-desc">Học chữ cái và đọc qua trò chơi</div>
+                </a>
+                <a href="https://www.abcya.com" target="_blank" class="link-card">
+                    <div class="link-icon">🎮</div>
+                    <div class="link-title">ABCya!</div>
+                    <div class="link-desc">Trò chơi giáo dục cho trẻ em</div>
+                </a>
+                <a href="https://www.pbskids.org" target="_blank" class="link-card">
+                    <div class="link-icon">📺</div>
+                    <div class="link-title">PBS Kids</div>
+                    <div class="link-desc">Video và trò chơi học tập miễn phí</div>
+                </a>
+                <a href="https://www.funbrain.com" target="_blank" class="link-card">
+                    <div class="link-icon">🧠</div>
+                    <div class="link-title">Funbrain</div>
+                    <div class="link-desc">Trò chơi toán học và đọc hiểu</div>
+                </a>
+                <a href="https://www.britishcouncil.org/learnenglishkids" target="_blank" class="link-card">
+                    <div class="link-icon">🇬🇧</div>
+                    <div class="link-title">LearnEnglish Kids</div>
+                    <div class="link-desc">British Council - Tài liệu học chất lượng cao</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
