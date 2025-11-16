@@ -10,7 +10,7 @@ const vocabulary = [
     { word: 'House', vn: 'Ngôi nhà', emoji: '🏠', pronunciation: '/haʊs/' },
     { word: 'Ice Cream', vn: 'Kem', emoji: '🍦', pronunciation: '/aɪs kriːm/' },
     { word: 'Jump', vn: 'Nhảy', emoji: '🦘', pronunciation: '/dʒʌmp/' }
-    { word: 'Code', vn: 'Mã', emoji: '', pronunciation: '' }
+    { word: 'Code', vn: 'Mã', emoji: '', pronunciation: '/dʒʌmp/' }
 ];
 
 let score = 0;
